@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.i12bp8.fmhy-deck",
   "name": "FMHY Deck",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "i12bp8",
   "description": "Fast local FMHY search, saved resources and catalog change awareness",
   "kinds": ["bar-widget"],

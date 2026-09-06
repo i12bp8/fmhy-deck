@@ -22,9 +22,25 @@ BarWidget {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "󰆋"
+    text: "FMHY"
+    // Keep the wordmark compact enough for a narrow bar slot.
+    fontSize: 12
+    labelVisible: false
+    fixedWidth: wordmark.implicitWidth + Style.space(10)
     tooltipText: "FMHY Deck · " + (Deck.DeckStore.unseen ? "Changes to review" : "Find resources")
     onPressed: deck.toggle()
+    Text {
+      id: wordmark
+      anchors.centerIn: parent
+      text: button.text
+      textFormat: Text.PlainText
+      color: button.foreground
+      font.family: button.fontFamily
+      font.pixelSize: button.fontSize
+      font.bold: true
+      font.letterSpacing: -0.45
+      renderType: Text.NativeRendering
+    }
     Rectangle {
       anchors.right: parent.right
       anchors.top: parent.top
